@@ -1,0 +1,56 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "SmartAPC: Backend (Flask)",
+      "type": "shell",
+      "options": {
+        "cwd": "D:\\SmartAPC\\backend"
+      },
+      "command": "python",
+      "args": [
+        "-m",
+        "flask",
+        "run",
+        "--host=0.0.0.0",
+        "--port=5000"
+      ],
+      "env": {
+        "FLASK_APP": "app.py",
+        "FLASK_ENV": "development"
+      },
+      "isBackground": true,
+      "presentation": {
+        "panel": "dedicated",
+        "reveal": "always"
+      }
+    },
+    {
+      "label": "SmartAPC: Frontend (Vite)",
+      "type": "shell",
+      "options": {
+        "cwd": "D:\\SmartAPC\\frontend"
+      },
+      "command": "npm",
+      "args": [
+        "run",
+        "dev",
+        "--",
+        "--host"
+      ],
+      "isBackground": true,
+      "presentation": {
+        "panel": "dedicated",
+        "reveal": "always"
+      }
+    },
+    {
+      "label": "SmartAPC: Back+Front (Parallel)",
+      "dependsOn": [
+        "SmartAPC: Backend (Flask)",
+        "SmartAPC: Frontend (Vite)"
+      ],
+      "dependsOrder": "parallel"
+    }
+  ]
+}

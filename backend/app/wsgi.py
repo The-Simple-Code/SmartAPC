@@ -1,2 +1,10 @@
-﻿from . import create_app
+﻿# D:\SmartApc\backend\app\wsgi.py
+import sys
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parents[1]  # ...\backend
+if str(BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(BASE_DIR))
+
+from app import create_app
 app = create_app()
+
