@@ -1,0 +1,18 @@
+// SmartAPC/.vscode/keybindings.json
+[
+  {
+    "key": "f6",
+    "command": "workbench.action.tasks.runTask",
+    "args": "SmartAPC: Backend (Flask)"
+  },
+  {
+    "key": "f7",
+    "command": "workbench.action.tasks.runTask",
+    "args": "SmartAPC: Frontend (Vite)"
+  },
+  {
+    "key": "f8",
+    "command": "workbench.action.tasks.runTask",
+    "args": "SmartAPC: Back+Front (Parallel)"
+  }
+]

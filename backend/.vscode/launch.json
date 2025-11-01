@@ -1,0 +1,35 @@
+// D:\SmartApc\backend\.vscode\launch.json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "SmartApc Backend (Flask)",
+      "type": "debugpy",
+      "request": "launch",
+
+      // Flask 모듈 실행 방식
+      "module": "flask",
+      "cwd": "${workspaceFolder}",
+
+      // Flask 환경 변수
+      "env": {
+        "FLASK_APP": "app.wsgi:app",
+        "FLASK_ENV": "development",
+        "PYTHONPATH": "${workspaceFolder}",
+        "DOTENV_PATH": "${workspaceFolder}\\.env"
+      },
+
+      // 실행 인자
+      "args": [
+        "run",
+        "--host=0.0.0.0",
+        "--port=5000"
+      ],
+
+      // 옵션
+      "jinja": true,
+      "justMyCode": true,
+      "console": "integratedTerminal"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+# D:\SmartAPC\.gitignore
+backend/.env
+**/__pycache__/
+backend/.venv/
+frontend/node_modules/

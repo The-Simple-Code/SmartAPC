@@ -1,1 +1,12 @@
-﻿console.log("SmartAPC frontend bootstrap (stub)");
+﻿// D:\SmartApc\frontend\src\main.ts
+import './assets/tailwind.css'
+
+import { createApp } from 'vue'
+import { createPinia } from 'pinia'
+import router from '@/router'
+import App from './App.vue'
+
+const app = createApp(App)
+app.use(createPinia())
+app.use(router)
+app.mount('#app')
